@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- Menghubungkan file CSS eksternal untuk tampilan halaman -->
+    <link rel="stylesheet" href="style.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ONE TAB ABOUT ME</title>
+
+</head>
+
+<body>
+
+    <!-- 1. HEADER: Identitas -->
+    <header>
+        <h1>ONE TAB ABOUT ME</h1>
+
+        <figure>
+            <img src="foto.jpg" alt="Foto Profil" width="150">
+            <figcaption>Clareta Oktriani Sambang(Oktri)</figcaption>
+        </figure>
+
+        <nav>
+            <ul>
+                <li><a href="#tentang">Tentang Saya</a></li>
+                <li><a href="#portofolio">Portofolio dan Pengalaman</a></li>
+                <li><a href="#kontak">Kontak dan Media Sosial</a></li>
+            </ul>
+            <!-- Tombol untuk mengaktifkan/menonaktifkan mode gelap via JavaScript -->
+            <button id="btn-tema"> Mode Gelap</button>
+            <!-- Tombol untuk menyembunyikan/menampilkan section kontak via JavaScript -->
+            <button id="btn-kontak">Sembunyikan Kontak</button>
+            <!-- Tombol untuk menambah satu item pengalaman baru via JavaScript -->
+            <button id="btn-tambah">Tambah Pengalaman</button>
+        </nav>
+    </header>
+
+    <hr>
+
+    <!-- 2. MAIN -->
+    <main>
+
+        <!-- SECTION 1: Biodata Diri -->
+        <section id="tentang">
+            <h2>Tentang Saya</h2>
+
+            <p>
+                Hallo prend!, kenalin aku Oktri, salah satu mahasiswi
+                Program Studi Informatika di Universitas Sanata Dharma Yogyakarta.
+            </p>
+
+            <table>
+                <caption>Biodata Diri</caption>
+
+                <tbody>
+                    <tr>
+                        <td>Nama Lengkap</td>
+                        <td>:</td>
+                        <td>Clareta Oktriani Sambang</td>
+                    </tr>
+
+                    <tr>
+                        <td>Nama Panggilan</td>
+                        <td>:</td>
+                        <td>Oktri</td>
+                    </tr>
+
+                    <tr>
+                        <td>NIM</td>
+                        <td>:</td>
+                        <td>255314015</td>
+                    </tr>
+
+                    <tr>
+                        <td>Tempat, Tanggal Lahir</td>
+                        <td>:</td>
+                        <td>Ruteng, 24 Oktober 2007</td>
+                    </tr>
+
+                    <tr>
+                        <td>Jenis Kelamin</td>
+                        <td>:</td>
+                        <td>Perempuan</td>
+                    </tr>
+
+                    <tr>
+                        <td>Agama</td>
+                        <td>:</td>
+                        <td>Katolik</td>
+                    </tr>
+
+                    <tr>
+                        <td>Alamat</td>
+                        <td>:</td>
+                        <td>Jl. Paingan Maguwoharjo</td>
+                    </tr>
+
+                    <tr>
+                        <td>Program Studi</td>
+                        <td>:</td>
+                        <td>Informatika</td>
+                    </tr>
+
+                    <tr>
+                        <td>Universitas</td>
+                        <td>:</td>
+                        <td>Universitas Sanata Dharma</td>
+                    </tr>
+
+                    <tr>
+                        <td>Hobi</td>
+                        <td>:</td>
+                        <td>Menggambar, mendengarkan Spotify, membaca komik</td>
+                    </tr>
+
+                    <tr>
+                        <td>Motto</td>
+                        <td>:</td>
+                        <td>
+                            <em>
+                                "Jangan pernah berhenti belajar, karena hidup tidak pernah berhenti mengajarkan"
+                            </em>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <hr>
+
+        <!-- SECTION 2: Portofolio & Pengalaman Organisasi -->
+ <section id="portofolio" class="daftar-artikel">
+    <h2>Pengalaman Organisasi dan Kepanitiaan</h2>
+
+    <form id="form-pengalaman" class="form-pengalaman tersembunyi">
+        <label for="input-judul">Judul Pengalaman</label>
+        <input type="text" id="input-judul" name="judul" required>
+
+        <label for="input-periode">Periode</label>
+        <input type="text" id="input-periode" name="periode" placeholder="Contoh: Januari 2026 - Maret 2026" required>
+
+        <label for="input-deskripsi">Deskripsi</label>
+        <textarea id="input-deskripsi" name="deskripsi" required></textarea>
+
+        <button type="submit">Simpan</button>
+    </form>
+</section>
+
+        <hr>
+
+        <!-- ASIDE: Informasi Tambahan / Pendukung -->
+        <aside id="kontak">
+            <h2>Kontak Dan Informasi Tambahan</h2>
+
+            <p>Kalau pengen tau lebih tentang aku, kepo aja di link di bawah ini :</p>
+
+            <ul>
+                <li>Email:<a href="mailto:oktri.claret@gmail.com">
+                        oktri.claret@gmail.com
+                    </a>
+                </li>
+
+                <li>Instagram:
+                    <a href="https://www.instagram.com/oktri_smbng?stkn=N2EweWtmNHY5a2pv" target="_blank"
+                        rel="noopener noreferrer"> @oktri_smbng </a>
+                </li>
+            </ul>
+        </aside>
+
+    </main>
+
+    <hr>
+
+    <!-- 3. FOOTER: Penutup & Hak Cipta -->
+    <footer>
+        <p>
+            &copy; 2026 Oktri - Pemrograman Berbasis Web, Universitas Sanata Dharma.
+        </p>
+    </footer>
+    <!-- Menghubungkan file JavaScript, diletakkan sebelum </body> agar HTML dimuat lebih dulu -->
+    <script src="script.js"></script>
+</body>
+
+</html>
