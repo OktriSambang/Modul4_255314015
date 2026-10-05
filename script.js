@@ -1,10 +1,10 @@
-"use strict"; // Mengaktifkan mode ketat JavaScript untuk menghindari bug
+"use strict"; 
 
-// Langkah 1: Mengambil elemen <h1> dari header dan menampilkan isinya di Console
+// Langkah 1: Mengambil elemen <h1> dari header dan menampilkan isinya 
 const judulProfil = document.querySelector("header h1");
 if (judulProfil) {
-    console.log(judulProfil);             // menampilkan elemen HTML
-    console.log(judulProfil.textContent); // menampilkan teks judul
+    console.log(judulProfil);          
+    console.log(judulProfil.textContent); 
 }
 
 // Langkah 2: Mengambil tombol dark mode dari halaman
@@ -54,7 +54,7 @@ const daftarPengalaman = [
 const containerPengalaman = document.querySelector(".daftar-artikel");
 
 if (containerPengalaman) {
-    // Fungsi render satu item (isinya sama seperti isi forEach di modul),
+    // Fungsi render satu item 
     // dibuat sebagai fungsi agar bisa dipakai ulang oleh tombol tambah
     function renderPengalaman(data) {
         const article = document.createElement("article");
@@ -91,7 +91,7 @@ if (containerPengalaman) {
     // Langkah 5: Event delegation — satu listener menangani semua tombol Hapus
     containerPengalaman.addEventListener("click", (e) => {
         if (e.target.tagName === "BUTTON") {
-            e.target.closest("article").remove(); // hapus article terdekat dari tombol
+            e.target.closest("article").remove();
         }
     });
 
@@ -104,9 +104,9 @@ if (containerPengalaman) {
             formPengalaman.classList.toggle("tersembunyi");
         });
 
-        // Klik "Simpan" -> baca isian, simpan ke array, tampilkan di halaman
+        // Klik "Simpan" -baca isian, simpan ke array, tampilkan di halaman
         formPengalaman.addEventListener("submit", (e) => {
-            e.preventDefault(); // cegah halaman reload
+            e.preventDefault(); 
 
             const dataForm = new FormData(formPengalaman);
             const itemBaru = {
@@ -115,10 +115,10 @@ if (containerPengalaman) {
                 deskripsi: dataForm.get("deskripsi").trim()
             };
 
-            daftarPengalaman.push(itemBaru); // simpan ke array data
-            renderPengalaman(itemBaru);      // tampilkan di halaman
+            daftarPengalaman.push(itemBaru);
+            renderPengalaman(itemBaru); 
 
-            formPengalaman.reset();                      // kosongkan isian
+            formPengalaman.reset();   //kosongkan formuii
             formPengalaman.classList.add("tersembunyi"); // sembunyikan lagi form
         });
     }
